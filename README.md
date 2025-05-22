@@ -3,9 +3,9 @@
 🎯 Latar Belakang Masalah
 Sebuah perusahaan logistik mengelola beberapa gudang penyimpanan yang menyimpan barang sensitif seperti makanan, obat-obatan, dan elektronik. Untuk menjaga kualitas penyimpanan, gudang-gudang tersebut dilengkapi dengan dua jenis sensor:
 
-Sensor Suhu
+- Sensor Suhu
 
-Sensor Kelembaban
+- Sensor Kelembaban
 
 Sensor akan mengirimkan data setiap detik. Perusahaan ingin memantau kondisi gudang secara real-time untuk mencegah kerusakan barang akibat suhu terlalu tinggi atau kelembaban berlebih.
 
@@ -13,9 +13,9 @@ Sensor akan mengirimkan data setiap detik. Perusahaan ingin memantau kondisi gud
 1. Buat Topik Kafka
 Buat dua topik di Apache Kafka:
 
-sensor-suhu-gudang
+- sensor-suhu-gudang
 
-sensor-kelembaban-gudang
+- sensor-kelembaban-gudang
 
 Topik ini akan digunakan untuk menerima data dari masing-masing sensor secara real-time.
 
