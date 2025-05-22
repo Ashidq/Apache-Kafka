@@ -103,6 +103,11 @@ services:
 
 ```
 
+- Cara Menjalankan docker `docker compose up -d`
+- Cek container yang telah dibuat `docker ps`
+
+[gambar]
+
 #### suhu_producer.py
 ```
 from kafka import KafkaProducer
@@ -125,6 +130,10 @@ while True:
         producer.send('sensor-suhu-gudang', value=data)
     time.sleep(1)
 ```
+
+- Cara Menjalankannya di folder big data `python3 producer/suhu_producer.py`
+
+[gambar]
 
 #### kelembaban_producer.py
 ```
@@ -150,6 +159,10 @@ while True:
         producer.send('sensor-kelembaban-gudang', value=data)
     time.sleep(1)
 ```
+
+- Cara Menjalankannya di folder big data `python3 producer/kelembaban_producer.py`
+
+[gambar]
 
 #### consumer_stream.py
 ```
