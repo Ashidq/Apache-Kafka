@@ -106,7 +106,7 @@ services:
 - Cara Menjalankan docker `docker compose up -d`
 - Cek container yang telah dibuat `docker ps`
 
-[gambar]
+![Image](https://github.com/user-attachments/assets/f6715743-0f71-46f1-869f-5b87309f4db3)
 
 ### suhu_producer.py
 ```
