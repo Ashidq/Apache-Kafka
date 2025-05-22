@@ -242,3 +242,11 @@ query = laporan_df.writeStream \
 query.awaitTermination()
 
 ```
+
+#### Masuk kedalam container spark `docker exec -it big-data_spark_1 bash`
+
+#### Menjalankan `consumer_stream.py` `/opt/bitnami/spark/bin/spark-submit --jars
+/opt/bitnami/spark/jars/spark-sql-kafka-0-10_2.12-3.3.0.jar /opt/spark-apps
+/consumer_stream.py`
+
+
