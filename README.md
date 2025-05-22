@@ -57,3 +57,14 @@ Jika ditemukan suhu > 80°C dan kelembaban > 70% pada gudang yang sama, tampilka
 [PERINGATAN KRITIS] Gudang G1: - Suhu: 84°C - Kelembaban: 73% - Status: Bahaya tinggi! Barang berisiko rusak Gudang G2: - Suhu: 78°C - Kelembaban: 68% - Status: Aman Gudang G3: - Suhu: 85°C - Kelembaban: 65% - Status: Suhu tinggi, kelembaban normal Gudang G4: - Suhu: 79°C - Kelembaban: 75% - Status: Kelembaban tinggi, suhu aman
 
 ### Langkah Pengerjaannya
+
+- Membuat Struktur direktori 
+```
+big-data/
+├── docker-compose.yml
+├── producer/
+│   ├── suhu_producer.py
+│   └── kelembaban_producer.py
+├── pyspark/
+│   └── consumer_stream.py
+```
