@@ -71,7 +71,7 @@ big-data/
 
 - Isi File `docker-compose.yml`, `suhu_producer.py`, `kelembaban_producer.py` dan `consumer_stream.py`
 
-#### docker-compose.yml
+### docker-compose.yml
 ```
 version: '3.8'
 
@@ -108,7 +108,7 @@ services:
 
 [gambar]
 
-#### suhu_producer.py
+### suhu_producer.py
 ```
 from kafka import KafkaProducer
 import json, time, random
@@ -131,11 +131,16 @@ while True:
     time.sleep(1)
 ```
 
-- Cara Menjalankannya di folder big data `python3 producer/suhu_producer.py`
+#### Install kafka-python
+- python3 -m venv venv
+- source venv/bin/active
+- pip install kafka-python
+ 
+#### Cara Menjalankannya di folder big data `python3 producer/suhu_producer.py`
 
 [gambar]
 
-#### kelembaban_producer.py
+### kelembaban_producer.py
 ```
 from kafka import KafkaProducer
 import json, time, random
@@ -160,11 +165,16 @@ while True:
     time.sleep(1)
 ```
 
-- Cara Menjalankannya di folder big data `python3 producer/kelembaban_producer.py`
+#### Install kafka-python
+- python3 -m venv venv
+- source venv/bin/active
+- pip install kafka-python
+ 
+#### Cara Menjalankannya di folder big data `python3 producer/kelembaban_producer.py`
 
 [gambar]
 
-#### consumer_stream.py
+### consumer_stream.py
 ```
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col, udf
