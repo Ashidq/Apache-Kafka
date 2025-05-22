@@ -108,15 +108,22 @@ services:
 from kafka import KafkaProducer
 import json, time, random
 
-producer = KafkaProducer(bootstrap_servers='localhost:9092', value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-gudangs = ['G1', 'G2', 'G3']
+producer = KafkaProducer(
+    bootstrap_servers='localhost:9092',
+    value_serializer=lambda v: json.dumps(v).encode('utf-8')  # serializer ke JSON
+)
+
+gudangs = ['G1', 'G2', 'G3', 'G4']
 
 while True:
     for g in gudangs:
-        data = {"gudang_id": g, "suhu": random.randint(75, 90)}
-        producer.send('sensor-suhu-gudang', data)
+        data = {
+            "gudang_id": g,
+            "suhu": random.randint(75, 85)
+        }
+        print(f"Mengirim: {data}")
+        producer.send('sensor-suhu-gudang', value=data)
     time.sleep(1)
-
 ```
 
 #### kelembaban_producer.py
@@ -124,15 +131,24 @@ while True:
 from kafka import KafkaProducer
 import json, time, random
 
-producer = KafkaProducer(bootstrap_servers='localhost:9092', value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-gudangs = ['G1', 'G2', 'G3']
+# Membuat Kafka producer dengan serializer ke JSON (dalam bentuk bytes)
+producer = KafkaProducer(
+    bootstrap_servers='localhost:9092',
+    value_serializer=lambda v: json.dumps(v).encode('utf-8')
+)
+
+# Daftar gudang
+gudangs = ['G1', 'G2', 'G3', 'G4']
 
 while True:
     for g in gudangs:
-        data = {"gudang_id": g, "kelembaban": random.randint(65, 80)}
-        producer.send('sensor-kelembaban-gudang', data)
+        data = {
+            "gudang_id": g,
+            "kelembaban": random.randint(60, 80)
+        }
+        print(f"Mengirim: {data}")
+        producer.send('sensor-kelembaban-gudang', value=data)
     time.sleep(1)
-
 ```
 
 #### consumer_stream.py
