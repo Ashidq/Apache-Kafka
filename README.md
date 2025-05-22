@@ -138,7 +138,7 @@ while True:
  
 #### Cara Menjalankannya di folder big data `python3 producer/suhu_producer.py`
 
-[gambar]
+![Image](https://github.com/user-attachments/assets/e4e2e727-fcab-4d9c-a9c0-7db4bb6b0c8a)
 
 ### kelembaban_producer.py
 ```
@@ -172,7 +172,7 @@ while True:
  
 #### Cara Menjalankannya di folder big data `python3 producer/kelembaban_producer.py`
 
-[gambar]
+![Image](https://github.com/user-attachments/assets/fc75cd79-89ab-4e68-9b42-8d3a8561dd89)
 
 ### consumer_stream.py
 ```
