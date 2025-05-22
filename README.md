@@ -249,4 +249,5 @@ query.awaitTermination()
 /opt/bitnami/spark/jars/spark-sql-kafka-0-10_2.12-3.3.0.jar /opt/spark-apps
 /consumer_stream.py`
 
+![Image](https://github.com/user-attachments/assets/08c6d00a-bb09-492c-b27e-7e319188d3be)
 
